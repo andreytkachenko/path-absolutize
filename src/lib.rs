@@ -357,7 +357,7 @@ mod absolutize;
 #[macro_use]
 mod macros;
 
-#[cfg(unix)]
+#[cfg(any(unix, target_family = "wasm"))]
 mod unix;
 
 #[cfg(windows)]
